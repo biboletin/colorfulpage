@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="windows-1251">
+<head>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div id="container">
+	<div id="red"    class="colors"></div>
+	<div id="blue"   class="colors"></div>
+	<div id="yellow" class="colors"></div>
+	<div id="black"  class="colors"></div>
+	<div id="green"  class="colors"></div>
+	<div id="purple" class="colors"></div>
+	<div id="brown"  class="colors"></div>
+	<div id="gray"   class="colors"></div>
+	<div id="snow"   class="colors"></div>
+</div>
+<br/>
+<div>
+<div id="text-container">
+<p>
+	Elements are draggable().
+</p>
+	<div id="text-colors-container">
+		<div id="c1" class="txt-colors c1"></div>
+		<div id="c2" class="txt-colors c2"></div>
+		<div id="c3" class="txt-colors c3"></div>
+		<div id="c4" class="txt-colors c4"></div>
+		<div id="c5" class="txt-colors c5"></div>
+		<div id="c6" class="txt-colors c6"></div>
+		<div id="c7" class="txt-colors c7"></div>
+		<div id="c8" class="txt-colors c8"></div>
+		<div id="c9" class="txt-colors c9"></div>
+	</div>
+</div>
+	<div id="menu">
+		<ul>
+			<li class="arial">ABC</li>
+				<li>&nbsp;</li>
+			<li class="lucida">ABC</li>
+				<li>&nbsp;</li>
+			<li class="times">ABC</li>
+				<li>&nbsp;</li>
+			<li class="courier">ABC</li>
+		</ul>
+	</div>
+		<div id="footer"></div>
+</body>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.colors').click(function(){
+			$('body').attr('id', $(this).attr('id'));
+	});
+		$("#container").draggable();
+		$("#text-container").draggable();
+		$("#menu").draggable();
+		$("#footer").draggable();
+	
+	$('li').click(function(){
+		$('p').attr('class', $(this).attr('class'));
+	});
+	
+	$('.txt-colors').click(function(){
+		$('p').attr('id', $(this).attr('id'));
+	});
+});
+</script>
+</html>
